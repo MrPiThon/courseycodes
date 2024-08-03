@@ -195,9 +195,14 @@ h1 {
 }
 
 footer {
+    background-color: #8C5E58;
+    background-image: url(../images/footer-background.png);
+    background-size: cover;
+    background-position: center center;
+    /*display: flex;*/
+    justify-content: center;
     margin-top: 25px;
     padding: 20px;
-    background-color: #8C5E58;
     color: #D4D4D4;
 }
 
@@ -227,4 +232,9 @@ footer .quick-links a:hover {
 footer p {
     text-align: center;
     color: #D4D4D4;
+}
+
+.footer-image img {
+    display: block;
+    /*margin-left: 45%;*/
 }
