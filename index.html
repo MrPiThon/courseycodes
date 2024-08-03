@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Coursey Codes</title>
     <link href="styles/main.css" rel="stylesheet"/>
 </head>
-<body>
+
+<body class="transitionHalfSecond" id="body">
 
 <!-- Navigation Bar -->
 <nav>
@@ -98,6 +100,12 @@
         <img src="images/ssl_trust_seal.png" alt="SSL Trust Seal">
     </div>
 </footer>
-
 </body>
+
+<script>
+    window.onload = function() {
+        document.getElementById("body").style.opacity = "1";
+    }
+</script>
+
 </html>
