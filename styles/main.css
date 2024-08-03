@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Honk&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Honk&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    background-color: #19323C;
+    font-family: "Roboto Mono", monospace;
+}
+
+hr {
+    margin: 3rem auto;
+    border: 2px solid #F2545B;
+}
+
+nav {
+    background-color: #8C5E58;
+    background-image: url("../images/banner.png");
+    background-size: auto;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px #F2545B solid;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: #19323C;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0; /* Reset margin */
+    padding: 0 15px; /* Space out items */
+    display: flex;
+    align-items: center; /* Center items */
+    border-right: 2px solid #F2545B;
+}
+
+nav ul li:last-child {
+    border-right: none; /* Remove border from last item */
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #A93F55;
+    transition: color 0.3s ease-in-out;
+    display: block; /* Make clickable area larger */
+    padding: 5px 0; /* Padding for clickable area */
+}
+
+nav ul li a:hover {
+    color: #F2545B;
+    border-bottom: 2px solid #F2545B; /* Consistent border on hover */
+}
+
+nav ul li img {
+    width: 45px;
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.hero-section {
+    display: flex;
+}
+
+.hero-text {
+    margin-top: 20px;
+    color: white;
+    font-size: 7em;
+    text-align: center;
+    font-family: "Honk", sans-serif;
+}
+
+.hero-image {
+    margin: 150px 50px 50px;
+    width: 512px;
+    /*background: linear-gradient(0.25turn, #A93F55, #8C5E58, #A93F55);*/
+    border-radius: 25px;
+}
+
+.hero-button a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    border-bottom: 2px solid #F2545B;
+}
+
+.hero-button a:hover {
+    border: 2px solid #F2545B;
+}
+
+.about-me-section {
+    margin: 10rem 50px 50px;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Honk", sans-serif;
+    text-align: center;
+    font-size: 3em;
+    border-bottom: 1px solid #F2545B;
+    width: fit-content;
+    margin-left: 45%;
+}
+
+.about-me-text p {
+    margin: 0 25%;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+}
+
+.projects-section {
+    margin: 10rem 50px 50px;
+    text-align: center;
+}
+
+.project-card {
+    width: 25%;
+    margin: 2rem auto;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: "Roboto Mono", monospace;
+}
+
+.project-image img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 5px solid #8C5E58;
+}
+
+.project-description {
+    padding: 10px;
+    background-color: #8C5E58;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.project-description h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px 0;
+    border: none;
+    text-align: center;
+}
+
+.project-description p {
+    margin: 0;
+    padding: 0 10px 10px;
+}
+
+.project-link a {
+    text-decoration: none;
+    color: #F2545B;
+    background-color: black;
+}
+
+.project-link a:hover {
+    color: #A93F55;
+    border-bottom: 2px solid #A93F55;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
