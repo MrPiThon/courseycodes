@@ -139,6 +139,10 @@ h1 {
     font-family: "Roboto Mono", monospace;
 }
 
+.project-card:hover {
+    transform: scale(1.05);
+}
+
 .project-image img {
     width: 100%;
     border-top-left-radius: 10px;

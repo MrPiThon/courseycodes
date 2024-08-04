@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Honk&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@media (max-width: 768px) {
+    body {
+        background-color: #19323C;
+        font-family: "Roboto Mono", monospace;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        border: none;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    h1 {
+        margin-left: 28%;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .hero-text {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 75%;
+        margin: 20px 0;
+    }
+
+    .hero-button a {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+
+    .about-me-section {
+        padding: 20px;
+    }
+
+    .about-me-section h1 {
+        font-size: 2em;
+        margin: 20px auto;
+    }
+
+    .about-me-text p {
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    .projects-section {
+        padding: 20px;
+    }
+
+    .project-card {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .project-description h1 {
+        font-size: 1.2em;
+    }
+
+    .project-description p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer .quick-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .quick-links a {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+
+    .footer-image img {
+        width: 50%;
+        margin: 10px auto;
+    }
+}
