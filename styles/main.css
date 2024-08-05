@@ -3,9 +3,15 @@
 
 body {
     opacity: 0;
-    animation: 3s 1 alternate slidein;
+    animation: 3s 1 alternate slide-in;
     background-color: #19323C;
     font-family: "Roboto Mono", monospace;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
 }
 
 .transitionHalfSecond {
@@ -33,15 +39,13 @@ nav {
     height: 80px;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
     from {
-        translate: 150vw 0;
-        scale: 200% 1;
+        translate: 0 -150vw;
     }
 
     to {
         translate: 0 0;
-        scale: 100% 1;
     }
 }
 
