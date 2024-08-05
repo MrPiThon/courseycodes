@@ -3,6 +3,7 @@
 
 body {
     opacity: 0;
+    animation: 3s 1 alternate slidein;
     background-color: #19323C;
     font-family: "Roboto Mono", monospace;
 }
@@ -30,6 +31,18 @@ nav {
     top: 0;
     z-index: 1000; /* Ensure it stays above other content */
     height: 80px;
+}
+
+@keyframes slidein {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
 }
 
 nav ul {
