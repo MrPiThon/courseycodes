@@ -31,6 +31,9 @@
 
     h1 {
         margin-left: 28%;
+        font-family: "Roboto Mono", monospace;
+        font-weight: bold;
+        color: #F2545B;
     }
 
     .hero-section {
@@ -44,6 +47,9 @@
     .hero-text {
         font-size: 2em;
         text-align: center;
+        font-family: "Roboto Mono", monospace;
+        font-weight: bold;
+        color: #F2545B;
     }
 
     .hero-image {
@@ -52,9 +58,14 @@
         margin: 20px auto;
     }
 
+    .hero-image img {
+        width: 95%;
+    }
+
     .hero-button a {
         padding: 10px 20px;
         font-size: 1.2em;
+        color: #F2545B;
     }
 
     .about-me-section {
