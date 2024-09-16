@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Costello Pools - Contact Us</title>
+    <link href="../stylesheets/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../components/customer-form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../components/weather-fetch.js" defer></script>
+</head>
+
+<script>
+    window.onload = function() {
+        document.body.style.opacity = "1";
+    }
+
+    window.onclose = function() {
+        document.body.style.opacity = "0";
+    }
+</script>
+
+<body class="transitionHalfSecond">
+<nav>
+    <ul>
+        <li><a href="index.html"><img src="../images/logo.png" alt="logo"></a></li>
+        <li class="active"><a href="about-us.html"><strong>About Us</strong></a></li>
+        <li><a href="get-an-estimate.html"><strong>Get An Estimate</strong></a></li>
+        <li><a href="featured-pools.html"><strong>Featured Pools</strong></a></li>
+        <li><p id="weather-info"><strong>☁</strong></p></li>
+    </ul>
+</nav>
+
+<div class="about-section">
+    <div class="about-image">
+        <img src="../images/pool-party.png" alt="Pool Party">
+    </div>
+    <div class="about-text">
+        <h2>Welcome to Costello Pools</h2>
+        <p>At Costello Pools, we believe that a backyard pool is more than just a place to swim—it's a place where
+            memories are made. As a family-owned and operated business, we've been serving our community with pride
+            and passion since the early 1990s.</p>
+        <h2>Our Story</h2>
+        <p>Costello Pools was founded by Jane and Michael Costello, a husband-and-wife team with a dream of
+            bringing top-quality pools and exceptional customer service to our neighbors. What started as a small
+            venture from our garage has grown into a beloved local business, known for our personal touch and
+            dedication to excellence.</p>
+        <h2>Why Choose Us?</h2>
+        <p>Choosing Costello Pools means choosing a company that stands by its work.
+            Our satisfied customers are a testament to our dedication and integrity.
+            We are not just building pools; we are building lasting relationships.
+            <br><br>Thank you for considering Costello Pools. We look forward to making your backyard dreams come true!</p>
+    </div>
+</div>
+
+<div class="contact-us">
+    <h1>Contact Us</h1>
+
+    <form id="contact-form">
+        <input type="text" id="fname-field" placeholder="First name" required>
+        <input type="text" id="lname-field" placeholder="Last name" required>
+        <input type="email" id="email-field" placeholder="Email" required>
+
+        <label for="service-type">Type of Service:</label>
+        <select id="service-type" required>
+            <option value="other">Other</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="new-construction">New Construction</option>
+            <option value="renovation">Renovation</option>
+            <option value="repair">Repair</option>
+        </select>
+
+        <label for="newsletter">Subscribe to our newsletter:</label>
+        <input type="checkbox" id="newsletter">
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" rows="4" placeholder="Enter your comments here" required></textarea>
+
+        <button type="submit" id="contact-submit">Submit</button>
+    </form>
+    <div id="form-errors" style="color: red;"></div>
+
+    <p>Want to get a quote online? Try our free quote estimator <a href="get-an-estimate.html">here</a></p>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#contact-form").on("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            let errors = [];
+            let firstName = $("#fname-field").val().trim();
+            let lastName = $("#lname-field").val().trim();
+            let email = $("#email-field").val().trim();
+            let serviceType = $("#service-type").val();
+            let subscribed = $("#newsletter").prop("checked");
+            let comments = $("#comments").val().trim();
+
+            try {
+                if (!firstName) {
+                    errors.push("First name is required.");
+                }
+
+                if (!lastName) {
+                    errors.push("Last name is required.");
+                }
+
+                if (!email) {
+                    errors.push("Email is required.");
+                } else if (!validateEmail(email)) {
+                    errors.push("Please enter a valid email address.");
+                }
+
+                if (!serviceType) {
+                    errors.push("Please select a type of service.");
+                }
+
+                if (errors.length > 0) {
+                    throw errors;
+                }
+
+                $("#contact-submit").html("Submitted Successfully!");
+
+                let customer = new CustomerForm(firstName, lastName, email, serviceType, subscribed, comments);
+                customer.display();
+            } catch (err) {
+                let errorContainer = $("#form-errors");
+                errorContainer.empty(); // Clear previous errors
+                $.each(err, function(index, error) {
+                    errorContainer.append($("<div>").text(error));
+                });
+            }
+        });
+    });
+</script>
+
+<footer>
+    <div class="container">
+        <div class="quick-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="get-an-estimate.html">Get An Estimate</a>
+            <a href="featured-pools.html">Featured Pools</a>
+        </div>
+        <p>&copy; 2024 <a href="https://coursey.codes">Coursey Codes</a>. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

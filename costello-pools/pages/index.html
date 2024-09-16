@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Costello Pools</title>
+    <link href="../stylesheets/style.css" rel="stylesheet" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKQwU0D59yYS7lhS5xahOD2wHRKSp_wK8" defer></script>
+    <script src="../components/weather-fetch.js" defer></script>
+</head>
+
+<script>
+    window.onload = function() {
+        document.body.style.opacity = "1";
+    }
+
+    window.onclose = function() {
+        document.body.style.opacity = "0";
+    }
+</script>
+
+<div id="bubble-wrap">
+    <div class="bubble one"></div>
+    <div class="bubble two"></div>
+    <div class="bubble three"></div>
+    <div class="bubble four"></div>
+    <div class="bubble five"></div>
+    <div class="bubble six"></div>
+    <div class="bubble seven"></div>
+    <div class="bubble eight"></div>
+    <div class="bubble nine"></div>
+    <div class="bubble ten"></div>
+</div>
+
+<body class="transitionHalfSecond">
+<nav>
+    <ul>
+        <li class="active"><a href="index.html"><img src="../images/logo.png" alt="logo"></a></li>
+        <li><a href="about-us.html"><strong>About Us</strong></a></li>
+        <li><a href="get-an-estimate.html"><strong>Get An Estimate</strong></a></li>
+        <li><a href="featured-pools.html"><strong>Featured Pools</strong></a></li>
+        <li><p id="weather-info"><strong>☁</strong></p></li>
+    </ul>
+</nav>
+
+<div class="about-section">
+    <div class="about-img">
+        <img src="../images/costello_pools_logo.png" alt="Costello Pools Logo">
+    </div>
+    <div class="about-text">
+        <h1>We Are Costello</h1>
+        <p>At Costello Pools, we pride ourselves on our affordable pool cleaning services.
+        While our prices may be low, our ambition to bring you a clean and healthy pool is high.</p>
+    </div>
+</div>
+
+<div class="services-section">
+    <h2>Our Services</h2>
+    <div class="service">
+        <img src="../images/service1.png" alt="Pool Construction">
+        <h3>Pool Construction</h3>
+        <p>Custom-designed pools to fit your space and lifestyle.</p>
+    </div>
+    <div class="service">
+        <img src="../images/service2.png" alt="Maintenance">
+        <h3>Maintenance</h3>
+        <p>Reliable and affordable pool maintenance services.</p>
+    </div>
+    <div class="service">
+        <img src="../images/service3.png" alt="Renovations">
+        <h3>Renovations</h3>
+        <p>Transform your old pool into a modern, stylish retreat.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="quick-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="get-an-estimate.html">Get An Estimate</a>
+            <a href="featured-pools.html">Featured Pools</a>
+        </div>
+        <p>&copy; 2024 <a href="https://coursey.codes">Coursey Codes</a>. All rights reserved.</p>
+    </div>
+
+    <div id="map"></div>
+    <p style="color:#3A2A38">Latitude... <span id="lat"></span> -- Longitude... <span id="lng"></span></p>
+</footer>
+
+<script>
+    function initMap(lat, lng) {
+        const userLocation = { lat: lat, lng: lng };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: userLocation,
+        })
+        new google.maps.Marker({
+            position: userLocation,
+            map: map,
+        })
+    }
+
+    function showPosition(position) {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        document.getElementById("lat").textContent = lat;
+        document.getElementById("lng").textContent = lng;
+        initMap(lat, lng)
+    }
+
+    navigator.geolocation.getCurrentPosition(showPosition);
+</script>
+</body>
+</html>

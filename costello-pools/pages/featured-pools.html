@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Costello Pools - Featured Pools</title>
+    <link href="../stylesheets/style.css" rel="stylesheet" />
+    <script src="../components/weather-fetch.js" defer></script>
+</head>
+
+<script>
+    window.onload = function() {
+        document.body.style.opacity = "1";
+    }
+
+    window.onclose = function() {
+        document.body.style.opacity = "0";
+    }
+</script>
+
+<body class="transitionHalfSecond">
+<nav>
+    <ul>
+        <li><a href="index.html"><img src="../images/logo.png" alt="logo"></a></li>
+        <li><a href="about-us.html"><strong>About Us</strong></a></li>
+        <li><a href="get-an-estimate.html"><strong>Get An Estimate</strong></a></li>
+        <li class="active"><a href="featured-pools.html"><strong>Featured Pools</strong></a></li>
+        <li><p id="weather-info"><strong>☁</strong></p></li>
+    </ul>
+</nav>
+
+<div class="featured-section">
+    <div class="featured-image">
+        <img src="../images/featured/featured-pool-1.jpg" alt="Featured Pool 1">
+    </div>
+    <div class="featured-text">
+        <h2>The Smith's</h2>
+        <p>The Smith's have trusted our services for over 10 years.</p>
+    </div>
+</div>
+
+<div class="featured-section">
+    <div class="featured-image">
+        <img src="../images/featured/featured-pool-2.jpg" alt="Featured Pool 2">
+    </div>
+    <div class="featured-text">
+        <h2>The Henderson's</h2>
+        <p>The Henderson's have trusted our services for over 6 years.</p>
+    </div>
+</div>
+
+<div class="featured-section">
+    <div class="featured-image">
+        <img src="../images/featured/featured-pool-3.jpg" alt="Featured Pool 3">
+    </div>
+    <div class="featured-text">
+        <h2>The Carter's</h2>
+        <p>The Carter's joined our family last year, and have since added a lot of beauty to our trips!</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="quick-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="get-an-estimate.html">Get An Estimate</a>
+            <a href="featured-pools.html">Featured Pools</a>
+        </div>
+        <p>&copy; 2024 <a href="https://coursey.codes">Coursey Codes</a>. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
