@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero .hero-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero .hero-content img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .cta-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* Services Section */
+.services {
+    padding: 20px 10px;
+}
+
+.services h2 {
+    font-size: 2em;
+}
+
+.service-item {
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+}
+
+.service-item p {
+    font-size: 1em;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 20px 10px;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+}
+
+.testimonial-item {
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.testimonial-item p {
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+footer .quick-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .quick-links a {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+/* About Us Page */
+.about-us {
+    padding: 20px 10px;
+}
+
+.about-us h1 {
+    font-size: 2em;
+}
+
+.about-us p {
+    font-size: 1em;
+}
+
+/* Contact Us Page */
+.contact-us {
+    padding: 20px 10px;
+}
+
+.contact-us h1 {
+    font-size: 2em;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-us form .form-group label {
+    font-size: 1em;
+}
+
+.contact-us form .form-group input,
+.contact-us form .form-group textarea {
+    font-size: 1em;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Our Customers Page */
+.our-customers {
+    padding: 20px 10px;
+}
+
+.our-customers h1 {
+    font-size: 2em;
+}
+
+.our-customers .customer-item {
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1em;
+}

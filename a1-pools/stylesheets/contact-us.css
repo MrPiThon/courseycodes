@@ -1,0 +1,59 @@
+/* stylesheets/contact-us.css */
+
+.content {
+    max-width: 800px;
+    margin: 1% auto 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #004f7c;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    color: #004f7c;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #61d4b3;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #004f7c;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #61d4b3;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #004f7c;
+}

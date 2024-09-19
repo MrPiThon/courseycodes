@@ -1,0 +1,55 @@
+/* stylesheets/our-work.css */
+
+.content {
+    max-width: 1200px;
+    margin: 1% auto 0;
+    padding: 20px;
+    background-color: #61d4b3;
+    background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content h1 {
+    font-size: 3em;
+    color: #003366;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid #003366;
+}
+
+.photo-item p {
+    padding: 15px;
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    background-color: #003366;
+    border-top: 1px solid #003366;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
