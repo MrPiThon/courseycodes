@@ -9,17 +9,12 @@ body {
 .hamburger {
     display: none;
     font-size: 2em;
-    background: none;
-    border: none;
+    background: #003366; /* Bright background color */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for better click area */
     cursor: pointer;
-}
-
-/* Navigation links */
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
 }
 
 /* Hide navigation links by default on mobile */
@@ -185,6 +180,12 @@ footer .social-media a {
     padding: 20px 10px;
 }
 
+@media only screen and (max-width: 490px) {
+    .content h1 {
+        font-size: 1.5em;
+    }
+}
+
 .our-customers h1 {
     font-size: 2em;
 }
@@ -193,4 +194,33 @@ footer .social-media a {
     margin: 10px 0;
     padding: 15px;
     font-size: 1em;
+}
+
+/* Photo Collage */
+.photo-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-item {
+    flex: 1 1 calc(33.333% - 20px); /* Default width for larger screens */
+    max-width: calc(33.333% - 20px); /* Default width for larger screens */
+    box-sizing: border-box;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Ensure only one image per row on mobile */
+@media only screen and (max-width: 849px) {
+    .photo-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
