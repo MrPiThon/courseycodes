@@ -176,14 +176,14 @@ h1 {
     object-fit: cover; /* Maintain aspect ratio and cover the area */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom: 5px solid #8C5E58;
+    border-bottom: 5px solid #19323C;
     background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
 }
 
 .project-description {
     padding: 10px;
-    background-color: #8C5E58;
-    background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+    background-color: #19323C;
+    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
     color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -206,7 +206,7 @@ h1 {
 .project-link a {
     text-decoration: none;
     color: #F2545B;
-    background-color: black;
+    background-color: #000000;
 }
 
 .project-link a:hover {
